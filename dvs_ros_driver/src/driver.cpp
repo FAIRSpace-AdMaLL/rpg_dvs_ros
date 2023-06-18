@@ -48,7 +48,7 @@ DvsRosDriver::DvsRosDriver(ros::NodeHandle & nh, ros::NodeHandle nh_private) :
            dvs128_info_.deviceID, dvs128_info_.deviceIsMaster, dvs128_info_.dvsSizeX, dvs128_info_.dvsSizeY,
            dvs128_info_.firmwareVersion);
 
-  current_config_.streaming_rate = 30;
+  current_config_.streaming_rate = 20;
   delta_ = boost::posix_time::microseconds(long(1e6 / current_config_.streaming_rate));
 
   // set namespace

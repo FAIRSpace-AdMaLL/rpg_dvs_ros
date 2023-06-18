@@ -1,6 +1,10 @@
 <launch>
   <!-- camera driver -->
-  <node name="dvxplorer_ros_driver" pkg="dvxplorer_ros_driver" type="dvxplorer_ros_driver" />
+  <node name="dvxplorer_ros_driver" pkg="dvxplorer_ros_driver" type="dvxplorer_ros_driver" >
+    <param name="bias_sensitivity" value="0"/>
+    <param name="streaming_rate" value="25"/>
+    
+  </node>
 
   <!-- visualization -->
   <node name="dvs_renderer" pkg="dvs_renderer" type="dvs_renderer">
